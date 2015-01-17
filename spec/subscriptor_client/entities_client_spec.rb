@@ -40,6 +40,17 @@ describe SubscriptorClient::Base do
     end
   end
 
+  describe '#add_credits' do
+    it 'returns an entity of the client' do
+      VCR.use_cassette('add_credits_success') do
+        response = subject.add_credits(4, credits: 2).json
+
+        expect(response['id']).to eq 4
+        expect(response['remaining_credits']).to eq 4
+      end
+    end
+  end
+
   describe '#show' do
     it 'returns an entity of the client' do
       VCR.use_cassette('show_success') do

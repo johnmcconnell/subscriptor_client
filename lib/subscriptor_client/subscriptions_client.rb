@@ -23,7 +23,7 @@ module SubscriptorClient
 
     serializers do |r|
       r.on :create, :update, :destroy, :add_credits, :remove_credits,
-        use: JsonClient::BaseSerializer.new
+        use: JsonClient::ModelSerializer.new(model_name: 'subscription')
       r.on :index, :show,
         use: JsonClient::EmptySerializer.new
     end
