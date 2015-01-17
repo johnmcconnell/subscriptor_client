@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://subscriptor.herokuapp.com/api/v1/subscriptions/1?api_key=5&api_password=subscriptor_test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Jan 2015 21:32:44 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"33409e3edade6c26ff08594d783f276a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 41991d95-c56c-42bc-a099-3a476b6cc83d
+      X-Runtime:
+      - '0.235185'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"credits_remaining":0,"id":1,"entity_id":4,"credits":0,"created_at":"2015-01-17T21:32:45.445Z","updated_at":"2015-01-17T21:32:45.445Z"}'
+    http_version: 
+  recorded_at: Sat, 17 Jan 2015 21:32:46 GMT
+recorded_with: VCR 2.9.3
